@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="imageOfDay"
+            type="com.example.nasa.model.ImageOfDay" />
+    </data>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.ImageOfDayFragment"
+        app:layoutDescription="@xml/fragment_image_of_day_scene">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/image"
+            tools:src="@drawable/asteroid_safe"
+            app:bindIfImage="@{imageOfDay}"
+            android:layout_height="match_parent">
+
+        </ImageView>
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</layout>
